@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "streamlit-kmeans-demo"
+version = "0.1.0"
+description = ""
+authors = ["Violet Vivirand <purpleslovemail@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.1.4"
+streamlit = "^0.70.0"
+scikit-learn = "^0.23.2"
+matplotlib = "^3.3.2"
+Pillow = "^8.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+ipython = "^7.19.0"
+jupyter = "^1.0.0"
+jupyterlab = "^2.2.9"
+jupyter-http-over-ws = "^0.0.8"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
