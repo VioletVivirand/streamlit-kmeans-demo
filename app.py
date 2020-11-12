@@ -21,12 +21,10 @@ Reference: [Color Quantization using K-Means - Scikit-learn](https://scikit-lear
 """)
 st.title('K-Means Clustering Color Quantization')
 
-with st.beta_container():
-    URL = st.text_input('Assign an image URL (Allows JPG, JPEG format only):', value='', max_chars=None, key=None, type='default')
-    num_input_col1, _, num_input_col2 = st.beta_columns([5,1,5])
-    n_colors = num_input_col1.select_slider('Number of colors', [4,8,16,32,64,128,256], value=64)
-    n_samples = num_input_col2.select_slider('Number of samples', [10,100,1000,10000], value=1000)
-    url_submit_btn = st.button('Submit')
+URL = st.sidebar.text_input('Assign an image URL (Allows JPG, JPEG format only):', value='', max_chars=None, key=None, type='default')
+n_colors = st.sidebar.select_slider('Number of colors', [4,8,16,32,64,128,256], value=64)
+n_samples = st.sidebar.select_slider('Number of samples', [10,100,1000,10000], value=1000)
+url_submit_btn = st.sidebar.button('Submit')
 
 if url_submit_btn:
     with st.beta_container():
